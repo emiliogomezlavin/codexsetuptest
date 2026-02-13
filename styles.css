@@ -1,12 +1,12 @@
 :root {
-  --bg: #f5f8ff;
+  --bg: #070d22;
   --surface: #ffffff;
-  --ink: #152035;
-  --ink-soft: #43526d;
-  --brand: #3a67ff;
-  --brand-2: #0ebec7;
-  --line: #dfe7ff;
-  --dark: #111a30;
+  --ink: #f6f8ff;
+  --ink-soft: #c3ccef;
+  --brand: #7a33ff;
+  --brand-2: #14d7ff;
+  --line: #2b3766;
+  --dark: #050a1a;
 }
 
 * {
@@ -19,7 +19,7 @@ body {
   padding: 0;
   font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
   color: var(--ink);
-  background: var(--bg);
+  background: radial-gradient(circle at 15% 0%, #1a2551 0%, var(--bg) 42%), var(--bg);
 }
 
 .container {
@@ -56,7 +56,7 @@ a {
   top: 0;
   z-index: 50;
   backdrop-filter: blur(8px);
-  background: color-mix(in oklab, #f5f8ff 82%, white);
+  background: color-mix(in oklab, #09122b 82%, #18244b);
   border-bottom: 1px solid var(--line);
 }
 
@@ -76,7 +76,7 @@ a {
 nav {
   display: flex;
   gap: 1.2rem;
-  color: var(--ink-soft);
+  color: #d9e0ff;
   font-weight: 500;
 }
 
@@ -92,6 +92,13 @@ nav a {
   border-radius: 999px;
   padding: 0.8rem 1.3rem;
   display: inline-block;
+  box-shadow: 0 14px 30px rgba(34, 162, 255, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 34px rgba(104, 74, 255, 0.45);
 }
 
 .btn-small {
@@ -100,9 +107,9 @@ nav a {
 }
 
 .btn-ghost {
-  background: transparent;
-  color: var(--brand);
-  border: 1px solid var(--line);
+  background: rgba(20, 41, 92, 0.55);
+  color: #bcd0ff;
+  border: 1px solid #4a6be8;
 }
 
 .hero-grid {
@@ -113,7 +120,7 @@ nav a {
 }
 
 .eyebrow {
-  color: var(--brand);
+  color: #73a3ff;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -122,7 +129,7 @@ nav a {
 
 .lead {
   font-size: 1.08rem;
-  color: var(--ink-soft);
+  color: #d3dbfa;
   max-width: 65ch;
 }
 
@@ -139,15 +146,15 @@ nav a {
 
 .trust-points {
   padding-left: 1.1rem;
-  color: var(--ink-soft);
+  color: #ced7fb;
 }
 
 .panel {
-  background: var(--surface);
-  border: 1px solid var(--line);
+  background: linear-gradient(160deg, rgba(15, 28, 67, 0.98), rgba(10, 19, 44, 0.96));
+  border: 1px solid #3853aa;
   border-radius: 1rem;
   padding: 1.25rem;
-  box-shadow: 0 10px 30px rgba(24, 44, 90, 0.07);
+  box-shadow: 0 20px 40px rgba(3, 8, 26, 0.55);
 }
 
 .panel-stack {
@@ -156,10 +163,10 @@ nav a {
 }
 
 .panel article {
-  border: 1px solid var(--line);
+  border: 1px solid rgba(100, 139, 255, 0.35);
   border-radius: 0.8rem;
   padding: 0.9rem;
-  background: #f9fbff;
+  background: rgba(139, 173, 255, 0.08);
 }
 
 .panel h3 {
@@ -167,7 +174,7 @@ nav a {
 }
 
 .muted {
-  background: #edf2ff;
+  background: linear-gradient(180deg, rgba(34, 52, 110, 0.7), rgba(13, 23, 54, 0.8));
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
 }
@@ -182,11 +189,11 @@ nav a {
 
 .industry-grid span,
 .task-grid span {
-  background: white;
-  border: 1px solid var(--line);
+  background: rgba(16, 29, 67, 0.8);
+  border: 1px solid rgba(127, 164, 255, 0.35);
   border-radius: 0.65rem;
   padding: 0.7rem 0.9rem;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .service-grid {
@@ -196,15 +203,16 @@ nav a {
 }
 
 .service-card {
-  background: white;
-  border: 1px solid var(--line);
+  background: linear-gradient(160deg, rgba(15, 27, 65, 0.96), rgba(10, 18, 42, 0.96));
+  border: 1px solid rgba(100, 132, 236, 0.45);
   border-radius: 1rem;
   padding: 1.1rem;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.32);
 }
 
 .service-card ul {
   padding-left: 1.1rem;
-  color: var(--ink-soft);
+  color: #d4ddff;
 }
 
 .service-tag {
@@ -213,7 +221,7 @@ nav a {
 
 .benefit-line {
   font-weight: 600;
-  color: #0b335f;
+  color: #79dfff;
 }
 
 .flow-list {
@@ -224,7 +232,7 @@ nav a {
 }
 
 .dark {
-  background: var(--dark);
+  background: linear-gradient(180deg, #0a1129, #060b1e);
   color: #eff5ff;
 }
 
@@ -240,8 +248,8 @@ nav a {
 }
 
 .benefit-grid article {
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(206, 228, 255, 0.18);
+  background: rgba(73, 113, 255, 0.12);
+  border: 1px solid rgba(155, 191, 255, 0.35);
   border-radius: 0.8rem;
   padding: 1rem;
 }
@@ -254,8 +262,8 @@ nav a {
 
 blockquote {
   margin: 0;
-  background: #ffffff;
-  border: 1px solid var(--line);
+  background: linear-gradient(160deg, rgba(15, 28, 67, 0.95), rgba(10, 18, 43, 0.95));
+  border: 1px solid rgba(130, 166, 255, 0.35);
   border-radius: 1rem;
   padding: 1rem;
 }
@@ -267,8 +275,8 @@ blockquote {
 }
 
 .pricing-box {
-  background: white;
-  border: 1px solid var(--line);
+  background: linear-gradient(160deg, rgba(17, 31, 73, 0.96), rgba(10, 19, 44, 0.96));
+  border: 1px solid rgba(122, 159, 255, 0.35);
   border-radius: 1rem;
   padding: 2rem;
 }
@@ -280,7 +288,7 @@ blockquote {
 .site-footer {
   border-top: 1px solid var(--line);
   padding: 1.2rem 0;
-  background: #f8fbff;
+  background: #070d22;
 }
 
 .footer-wrap {
